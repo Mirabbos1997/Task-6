@@ -195,7 +195,7 @@ export default {
     const { id, nickname } = this.$route.params;
     this.nickname = nickname;
 
-    this.socket = io("http://localhost:5000");
+    this.socket = io("https://task-6-webapp.onrender.com");
     this.socket.emit("join-presentation", id);
 
     this.socket.on("update-slide", (data) => {

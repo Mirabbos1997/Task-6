@@ -32,7 +32,7 @@ export default {
     async fetchPresentations() {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/presentations"
+          "https://task-6-webapp.onrender.com/api/presentations"
         );
         this.presentations = response.data;
       } catch (error) {
@@ -47,7 +47,7 @@ export default {
       try {
         const title = prompt("Enter a presentation title:");
         const response = await axios.post(
-          "http://localhost:5000/api/presentations/create",
+          "https://task-6-webapp.onrender.com/api/presentations/create",
           {
             title,
             creator: this.nickname,
@@ -68,7 +68,7 @@ export default {
       }
       try {
         const response = await axios.post(
-          `http://localhost:5000/api/presentations/join/${presentationId}`,
+          `https://task-6-webapp.onrender.com/api/presentations/join/${presentationId}`,
           { nickname: this.nickname }
         );
 
